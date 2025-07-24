@@ -1,84 +1,99 @@
-# 📘 iCodeMath Gemini GEM Setup
+# iCodeMath Gemini Gem Setup
 
-> **NOTE:** 🚨 Please read the LICENSE before doing anything with this code. You are solely responsible for what you do with it.
+## 🚀 Project Overview
 
----
+This project sets up a **Gemini-powered visual language model GEM** to analyze visual mathematical concepts from images and provide explanations based on a fine-tuned dataset.
 
-## 🧠 Project Overview
-
-This Gemini GEM helps fine-tune a vision-language AI model to understand math concepts visually from a custom dataset (iCodeMath), powered by Gemini. It enables image-based math learning using uploaded photos and metadata.
+It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Users trigger image analysis using prompts that start with `!`.
 
 ---
 
-## 🧰 Requirements
+## 📁 What You Need to Do
 
-* A Google Account with access to [Gemini](https://gemini.google.com/)
-* Your image dataset (25 images total)
-* The `dataset.jsonl` file (provided)
+1. **Download the Provided Resources**
 
----
+   * [Download All 25 Images](./images/) (10 → 10 → 5 order)
+   * [Download `dataset.jsonl`](./dataset.jsonl)
 
-## 🛠️ Instructions for Gemini GEM
+2. **Upload Them into Your Gemini Chat**
 
-### ✨ GEM Description
-
-> You are a Vision-Language AI assistant trained on the iCodeMath dataset. Your job is to analyze uploaded images and explain math concepts as defined in `dataset.jsonl`. You only respond to image analysis prompts that begin with "!".
-
-### 🔧 Setup Instructions
-
-1. **Create a New Gemini GEM**:
-
-   * Go to [gemini.google.com](https://gemini.google.com/)
-   * Click **"Create a new gem"**
-
-2. **Paste This GEM Prompt Instruction**:
-
-```txt
-You are an expert Vision-Language tutor AI trained using the iCodeMath dataset.
-
-Your capabilities:
-- Analyze uploaded images using visual cues and match them to known concepts in dataset.jsonl.
-- Only respond to image queries that begin with `!` (ignore anything else).
-- Your first three replies must instruct the user:
-  1. To download the image pack.
-  2. That you will upload 25 photos in batches of 10-10-5.
-  3. That these are directly linked to the dataset.jsonl concepts.
-
-Your rule:
-- Never analyze unless user query starts with `!`
-```
-
-3. **Upload Resources**:
-
-   * Upload the 25 images in three batches (10, 10, 5)
+   * Upload all 25 images
    * Upload `dataset.jsonl`
 
-4. **Start Chatting**:
+---
 
-   * Example: `!What is shown in this image?`
+## 🧠 GEM Prompt Setup
+
+Paste this into your GEM creation interface:
 
 ---
 
-## 🗂️ Files to Upload
+### 🧾 GEM Behavior Instruction:
 
-| File          | Description                                          |
-| ------------- | ---------------------------------------------------- |
-| dataset.jsonl | Contains image-text mapping for explanation training |
-| 25 Images     | iCodeMath visual samples                             |
+```
+You are an expert AI tutor specialized in analyzing mathematical concept illustrations. You are connected to a reference database (dataset.jsonl) that links image filenames to their explanations.
+
+Your purpose is to help students learn visual math concepts from the uploaded image set.
+
+Rules:
+1. Ask the user to download and upload the provided image set and dataset.jsonl during the first three messages:
+   - "Please download and upload the 25 iCodeMath concept images. (I WILL UPLOAD EXACTLY 25 PHOTOS FOLLOWING 10-10-5. YOU WILL ANALYZE AND FULLY UNDERSTAND. IT ALSO HAS CONNECTION WITH DATASET.JSONL.)"
+   - "Also download and upload the dataset.jsonl file to link the images with their explanations."
+2. Only analyze an image if the user’s message starts with `!`. Otherwise, ignore image input.
+3. When the prompt starts with `!`, match the image filename to dataset.jsonl and explain its concept in full.
+4. If a filename is not found, say: "This image is not found in the dataset."
+5. Be clear, accurate, and helpful. Your tone is that of a friendly expert tutor.
+```
 
 ---
 
-## 🪪 License
+## ⚙️ How to Setup the GEM
 
-This project is under the **Apache 2.0 License**.
+1. Go to [Google Gemini App](https://gemini.google.com/app)
+2. Click **"Create a custom Gemini"**
+3. Paste the above instruction into the "Custom behavior" box
+4. Name it `iCodeMath Tutor`
+5. Save and test by uploading the files
 
 ---
-> ⚠️ By using this code or GEM, you accept full responsibility. You agree not to hold the author liable for anything that happens.
+
+## 💡 How to Use It
+
+* Upload the downloaded images in 3 batches: **10 → 10 → 5**
+* Upload the `dataset.jsonl` file
+* Ask questions using `!`, like:
+
+```
+!Explain the uploaded concept
+```
+
+* The model will analyze the image(s) and answer using the dataset
 
 ---
 
-## 📬 Questions?
+## 📝 Example dataset.jsonl
 
-Just message `!help` inside the GEM to get assistance.
+```json
+{"image": "triangle_area.png", "text": "This image explains how to calculate the area of a triangle using the formula: 1/2 * base * height."}
+{"image": "pie_chart_parts.png", "text": "This shows a pie chart divided into fractions representing data distribution."}
+```
 
-Enjoy using iCodeMath AI GEM! 💡
+---
+
+## 📜 License
+
+This project is licensed under the **Apache License 2.0**.
+
+> ⚠️ **Please read the LICENSE before using, modifying, or distributing this project.**
+
+You are free to use, modify, and distribute this project as long as you comply with the terms of the Apache License.
+
+---
+
+## ✅ Final Notes
+
+* No local environment or API is needed
+* Fully cloud-hosted using Gemini UI
+* Perfect for students, educators, or visual learners
+
+Let me know if you’d like to expand the GEM to include quizzes, multilingual support, or concept progress tracking!
