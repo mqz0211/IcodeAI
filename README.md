@@ -17,8 +17,10 @@ It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Use
 
 2. **Upload Them into Your Gemini Chat**
 
-   * Upload all 25 images
-   * Upload `dataset.jsonl`
+   * Upload all 25 images to the `images/` folder
+   * Upload `dataset.jsonl` to the root
+
+> ⚠️ **All 25 image filenames must match the entries in `dataset.jsonl`. Place them in the `images/` folder. Any mismatch will cause the GEM to say: “This image is not found in the dataset.”**
 
 ---
 
@@ -28,7 +30,7 @@ Paste this into your GEM creation interface:
 
 ---
 
-### 🧾 GEM Behavior Instruction:
+### 📜 GEM Behavior Instruction:
 
 ```
 You are an expert AI tutor specialized in analyzing mathematical concept illustrations. You are connected to a reference database (dataset.jsonl) that links image filenames to their explanations.
@@ -53,14 +55,15 @@ Rules:
 2. Click **"Create a custom Gemini"**
 3. Paste the above instruction into the "Custom behavior" box
 4. Name it `iCodeMath Tutor`
-5. Save and test by uploading the files
+5. Set visibility (private, link-only, or public)
+6. Save and test by uploading the files
 
 ---
 
 ## 💡 How to Use It
 
-* Upload the downloaded images in 3 batches: **10 → 10 → 5**
-* Upload the `dataset.jsonl` file
+* Upload the downloaded images in 3 batches: **10 → 10 → 5** into the `images/` folder
+* Upload the `dataset.jsonl` file to the root
 * Ask questions using `!`, like:
 
 ```
