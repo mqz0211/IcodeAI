@@ -70,24 +70,9 @@ Your rule:
 
 ## 🪪 License
 
-This project is under the **DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (WTFPL)**.
+This project is under the **Apache 2.0 License**.
 
-```
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
-
- Copyright (C) 2025 Qhaleesh MQZ
-
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-  0. You just DO WHAT THE FUCK YOU WANT TO.
-```
-
+---
 > ⚠️ By using this code or GEM, you accept full responsibility. You agree not to hold the author liable for anything that happens.
 
 ---
