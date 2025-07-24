@@ -20,8 +20,6 @@ It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Use
    * Upload all 25 images to the `images/` folder
    * Upload `dataset.jsonl` to the root
 
-> ⚠️ **All 25 image filenames must match the entries in `dataset.jsonl`. Place them in the `images/` folder. Any mismatch will cause the GEM to say: “This image is not found in the dataset.”**
-
 ---
 
 ## 🧠 GEM Prompt Setup
@@ -54,9 +52,8 @@ Rules:
 1. Go to [Google Gemini App](https://gemini.google.com/app)
 2. Click **"Create a custom Gemini"**
 3. Paste the above instruction into the "Custom behavior" box
-4. Name it `iCodeMath Tutor`
-5. Set visibility (private, link-only, or public)
-6. Save and test by uploading the files
+4. Name it `Icode`
+5. Save and test by uploading the files
 
 ---
 
@@ -93,10 +90,4 @@ You are free to use, modify, and distribute this project as long as you comply w
 
 ---
 
-## ✅ Final Notes
 
-* No local environment or API is needed
-* Fully cloud-hosted using Gemini UI
-* Perfect for students, educators, or visual learners
-
-Let me know if you’d like to expand the GEM to include quizzes, multilingual support, or concept progress tracking!
