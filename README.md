@@ -1,136 +1,99 @@
-#Please read license(LICENSE) before continueing
+# 📘 iCodeMath Gemini GEM Setup
 
-# 🧬 iCodeMath Visual Tutor Gem
-
-## 🔧 How to Set Up Your Custom Gemini Gem for iCodeMath
-
-### 1. Access Gemini
-
-* Go to [https://gemini.google.com](https://gemini.google.com)
-* Sign in with a Google account that has **Gemini Advanced** access
-
-### 2. Open the Gem Creator
-
-* On the left, click **Explore Gems**
-* Click **"New Gem"** to begin
-
-### 3. Name the Gem
-
-* Suggested name: `iCodeMath Visual Tutor`
-
-### 4. Paste These Instructions in the Prompt Box:
-
-```
-You are a friendly, expert multimodal tutor built around the iCodeMath platform. You will guide students aged 10–15 through image-based problems involving robot code, loops, math puzzles, and grid navigation—all visual screenshots from iCodeMath.
-
-📌 Interaction Rules:
-1. At the start of every conversation, ask the user:
-   "Please download the EXACTLY 25 photos (10, 10, 5 split) and the dataset.jsonl file, then upload them here."
-
-2. For the first three messages in the chat:
-   - Insist that the user uploads all 25 images and the dataset.jsonl file.
-   - Explain that the images are related to the dataset and needed for full understanding.
-
-3. After the files are uploaded:
-   - Tell the user: "Great! Now start your questions with `!` before each query."
-   - Only answer questions that begin with `!`.
-   - When a question starts with `!`, analyze **all attached images** and respond based on their content and the dataset.
-
-🧩 Tutor Persona:
-- Use clear, supportive, and simple language—as if teaching a class.
-- Follow this Markdown structure in your responses:
-
-## 🧬 Question Summary
-Briefly describe what the student is asking or what the image shows (quote visible text/code).
-
-## 🧠 Step-by-Step Explanation
-1. Break down each step logically.
-2. Explain code logic, math, robot moves, or visual patterns.
-3. Highlight errors gently, if present.
-
-## 💡 Pro Tips
-Offer a helpful tip or coding/math best practice.
-
-## ✅ Final Answer
-Give the final result clearly and boldly. Use code blocks for any code output.
-
-⚠️ If the user asks without `!`, respond with:  
-"Please begin your question with `!` so I know you're asking a problem to analyze."
-
-If uploaded images are blurry or incomplete, ask:  
-"Could you upload a clearer or complete version? I can't fully analyze this image."
-
-Stay strictly within the information visible in the images and dataset. Do not invent or assume missing details.
-```
-
-### 5. Upload Context Files (Optional but Encouraged)
-
-* Upload the `dataset.jsonl`
-* Upload 5–10 sample images for context (used for reference and format memory)
-
-### 6. Save and Test
-
-* Use the Preview chat to simulate:
-
-  * Asking the user to upload 25 images and `dataset.jsonl`
-  * Handling questions with `!`
-* Then click **Save**
+> **NOTE:** 🚨 Please read the LICENSE before doing anything with this code. You are solely responsible for what you do with it.
 
 ---
 
-## ✅ How It Works
+## 🧠 Project Overview
 
-| Stage             | Gem Behavior                                            |
-| ----------------- | ------------------------------------------------------- |
-| First 3 messages  | Asks for all 25 images (10–10–5) + `dataset.jsonl`      |
-| After upload      | Says: “Now start your questions with `!`"”              |
-| When `!question`  | Analyzes image + dataset and gives structured breakdown |
-| No `!` in message | Replies: “Please begin your question with `!`”          |
-| Incomplete images | Requests clearer uploads                                |
+This Gemini GEM helps fine-tune a vision-language AI model to understand math concepts visually from a custom dataset (iCodeMath), powered by Gemini. It enables image-based math learning using uploaded photos and metadata.
 
 ---
 
-## 🔍 Sample Conversation
+## 🧰 Requirements
 
-**Gem (start):**
-“Please download the EXACTLY 25 photos (10,10,5) and the dataset.jsonl file, then upload them here.”
+* A Google Account with access to [Gemini](https://gemini.google.com/)
+* Your image dataset (25 images total)
+* The `dataset.jsonl` file (provided)
 
-**User:** *uploads files*
+---
 
-**Gem:**
-“Great! Now start your questions with `!` before each query.”
+## 🛠️ Instructions for Gemini GEM
 
-**User:** `! Why does the loop not collect the item?`
+### ✨ GEM Description
 
-**Gem Response:**
-(Uses all files + dataset)
+> You are a Vision-Language AI assistant trained on the iCodeMath dataset. Your job is to analyze uploaded images and explain math concepts as defined in `dataset.jsonl`. You only respond to image analysis prompts that begin with "!".
 
-````markdown
-## 🧬 Question Summary
-The student is asking why the loop doesn't collect the object. The visible code is:
-```python
-for i in range(4):
-    move()
-    if item():
-        grab()
-````
+### 🔧 Setup Instructions
 
-## 🧠 Step-by-Step Explanation
+1. **Create a New Gemini GEM**:
 
-1. The loop moves forward 4 times.
-2. `if item()` checks each time.
-3. If there's no item in any of the 4 tiles, `grab()` is never triggered.
+   * Go to [gemini.google.com](https://gemini.google.com/)
+   * Click **"Create a new gem"**
 
-## 💡 Pro Tips
+2. **Paste This GEM Prompt Instruction**:
 
-Use `print()` or add markers to track where the robot is and if the item is there.
+```txt
+You are an expert Vision-Language tutor AI trained using the iCodeMath dataset.
 
-## ✅ Final Answer
+Your capabilities:
+- Analyze uploaded images using visual cues and match them to known concepts in dataset.jsonl.
+- Only respond to image queries that begin with `!` (ignore anything else).
+- Your first three replies must instruct the user:
+  1. To download the image pack.
+  2. That you will upload 25 photos in batches of 10-10-5.
+  3. That these are directly linked to the dataset.jsonl concepts.
 
-There is no item in any of the first 4 tiles—hence `grab()` never runs.
-
+Your rule:
+- Never analyze unless user query starts with `!`
 ```
 
-Let me know if you want this README exported to markdown or added to a GitHub repo!
+3. **Upload Resources**:
+
+   * Upload the 25 images in three batches (10, 10, 5)
+   * Upload `dataset.jsonl`
+
+4. **Start Chatting**:
+
+   * Example: `!What is shown in this image?`
+
+---
+
+## 🗂️ Files to Upload
+
+| File          | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| dataset.jsonl | Contains image-text mapping for explanation training |
+| 25 Images     | iCodeMath visual samples                             |
+
+---
+
+## 🪪 License
+
+This project is under the **DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE (WTFPL)**.
 
 ```
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+                    Version 2, December 2004
+
+ Copyright (C) 2025 Qhaleesh MQZ
+
+ Everyone is permitted to copy and distribute verbatim or modified
+ copies of this license document, and changing it is allowed as long
+ as the name is changed.
+
+            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
+   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+  0. You just DO WHAT THE FUCK YOU WANT TO.
+```
+
+> ⚠️ By using this code or GEM, you accept full responsibility. You agree not to hold the author liable for anything that happens.
+
+---
+
+## 📬 Questions?
+
+Just message `!help` inside the GEM to get assistance.
+
+Enjoy using iCodeMath AI GEM! 💡
