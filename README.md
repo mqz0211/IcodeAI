@@ -1,6 +1,6 @@
 ### Please Read the EULA AND License before continuing
 
-## This is specifically for Icodemath uses,developer will no have any liability against any unethical usage
+## This is specifically for Icodemath uses,developer will have no liability against any unethical usage
 
 ##  Project Overview
 
