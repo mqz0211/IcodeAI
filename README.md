@@ -1,12 +1,12 @@
 ### Please Read the EULA AND License before continuing
 
-# iCodeMath Gemini Gem Setup
+## This is specifically for Icodemath uses,developer will no have any liability against any unethical usage
 
 ##  Project Overview
 
 This project sets up a **Gemini-powered visual language model GEM** to analyze visual mathematical concepts from images and provide explanations based on a fine-tuned dataset.
 
-It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Users trigger image analysis using prompts that start with `!`.
+It uses Google Gemini's **Gem creation feature**,  Users trigger image analysis using prompts that start with `!`.
 
 ---
 
