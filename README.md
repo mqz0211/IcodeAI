@@ -2,7 +2,7 @@
 
 # iCodeMath Gemini Gem Setup
 
-## 🚀 Project Overview
+##  Project Overview
 
 This project sets up a **Gemini-powered visual language model GEM** to analyze visual mathematical concepts from images and provide explanations based on a fine-tuned dataset.
 
@@ -10,7 +10,7 @@ It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Use
 
 ---
 
-## 📁 What You Need to Do
+##  What You Need to Do
 
 1. **Download the Provided Resources**
 
@@ -25,13 +25,13 @@ It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Use
 
 ---
 
-## 🧠 GEM Prompt Setup
+##  GEM Prompt Setup
 
 Paste this into your GEM creation interface:
 
 ---
 
-### 📜 GEM Behavior Instruction:
+### GEM Behavior Instruction:
 
 ```
 You are an expert AI tutor specialized in analyzing mathematical concept illustrations. You are connected to a reference database (dataset.jsonl) that links image filenames to their explanations.
@@ -50,7 +50,7 @@ Rules:
 
 ---
 
-## ⚙️ How to Setup the GEM
+##  How to Setup the GEM
 
 1. Go to [Google Gemini App](https://gemini.google.com/app)
 2. Click **"Create a custom Gemini"**
@@ -60,7 +60,7 @@ Rules:
 
 ---
 
-## 💡 How to Use It
+## How to Use It
 
 * Upload the downloaded images in 3 batches: **10 → 10 → 5** 
 * Upload the `dataset.jsonl` file to the root
@@ -74,7 +74,7 @@ Rules:
 
 ---
 
-## 📝 Example dataset.jsonl
+##  Example dataset.jsonl
 
 ```json
 {"image": "triangle_area.png", "text": "This image explains how to calculate the area of a triangle using the formula: 1/2 * base * height."}
@@ -83,11 +83,11 @@ Rules:
 
 ---
 
-## 📜 License
+##  License
 
 This project is licensed under the **Apache License 2.0**.
 
-> ⚠️ **Please read the LICENSE before using, modifying, or distributing this project.**
+>  **Please read the LICENSE before using, modifying, or distributing this project.**
 
 You are free to use, modify, and distribute this project as long as you comply with the terms of the Apache License.
 
