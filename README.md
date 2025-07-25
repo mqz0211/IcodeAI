@@ -1,3 +1,5 @@
+### Please Read the EULA AND License before continuing
+
 # iCodeMath Gemini Gem Setup
 
 ## 🚀 Project Overview
@@ -17,8 +19,9 @@ It uses Google Gemini's **Gem creation feature**, not local hosting or APIs. Use
 
 2. **Upload Them into Your Gemini Chat**
 
-   * Upload all 25 images to the `images/` folder
-   * Upload `dataset.jsonl` to the root
+   * Upload all 25 images into the `images/` folder
+   * Upload `dataset.jsonl` to the **root** of the chat file area
+
 
 ---
 
@@ -52,14 +55,14 @@ Rules:
 1. Go to [Google Gemini App](https://gemini.google.com/app)
 2. Click **"Create a custom Gemini"**
 3. Paste the above instruction into the "Custom behavior" box
-4. Name it `Icode`
+4. Name it `ICde`
 5. Save and test by uploading the files
 
 ---
 
 ## 💡 How to Use It
 
-* Upload the downloaded images in 3 batches: **10 → 10 → 5** into the `images/` folder
+* Upload the downloaded images in 3 batches: **10 → 10 → 5** 
 * Upload the `dataset.jsonl` file to the root
 * Ask questions using `!`, like:
 
